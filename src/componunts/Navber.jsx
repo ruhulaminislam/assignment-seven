@@ -1,5 +1,5 @@
 
-
+import { connection } from "next/server";
 import Image from 'next/image'
 
 import MarqueeTexte from './MarqueeTexte'
@@ -10,7 +10,7 @@ import NavberProductLinks from './NavberProductLinks'
 const Navber = async () => {
     const res =await fetch("https://api.api-store.workers.dev/api/bazardor/categories")
     const allProducts = await res.json()
-  
+  await connection();
     const date = new Date().toLocaleDateString('bn-BD',{
         dateStyle: 'full',
     } )

@@ -1,6 +1,6 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-
+import { Suspense } from "react";
 import { Toaster } from "react-hot-toast";
 import Navber from "../componunts/Navber";
 import Footer from "@/componunts/Footer";
@@ -28,8 +28,10 @@ export default function RootLayout({ children }) {
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
-        
-          <Navber />
+        <Suspense fallback={<div>লোড হচ্ছে...</div>}>
+        <Navber />
+        </Suspense>
+          
         <main className="flex-1 ">
         {children}
              <Toaster />
