@@ -21,10 +21,10 @@ import { FaGithub } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
 
 export default function SignUp() {
-  const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  const onSubmit = async (e) => {
     e.preventDefault();
     const formData = new FormData(e.currentTarget);
-    const data: Record<string, string> = {};
+    const data = {};
 
     // Convert FormData to plain object
     formData.forEach((value, key) => {
