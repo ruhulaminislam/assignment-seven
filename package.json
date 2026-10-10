@@ -23,6 +23,7 @@
   },
   "devDependencies": {
     "@tailwindcss/turbopack": "^4",
+    "@types/react": "19.3.0",
     "babel-plugin-react-compiler": "1.0.0",
     "daisyui": "^5.7.47",
     "eslint": "^9",

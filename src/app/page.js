@@ -1,5 +1,7 @@
-import Banner from "@/componunts/home/Banner";
-import ProductsCards from "@/componunts/home/ProductsCards";
+
+import Banner from "../componunts/home/Banner";
+
+import ProductsCards from "../componunts/home/ProductsCards";
 
 
 export default async function Home() {
