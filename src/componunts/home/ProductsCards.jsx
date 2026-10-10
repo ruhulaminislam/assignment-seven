@@ -2,7 +2,7 @@
 import { authClient } from '@/lib/auth-client'
 import Image from 'next/image'
 import Link from 'next/link'
-import React from 'react'
+import React, { Suspense } from 'react'
 import toast from 'react-hot-toast'
 
 const ProductsCards = ({product}) => {
@@ -15,7 +15,8 @@ const ProductsCards = ({product}) => {
     console.log(product)
   return (
  
- <Link onClick={handleDitilesPage} href={`/ProductsDitilesPage/${product.id}`}>
+   
+    <Link onClick={handleDitilesPage} href={`/ProductsDitilesPage/${product?.id}`}>
  <div className="flex flex-col rounded-2xl border border-[#E1E8E1] bg-[#FAFCFA] p-5">
 
   {/* Product Info */}
@@ -62,6 +63,7 @@ const ProductsCards = ({product}) => {
 </div>
 
  </Link>
+  
 
   )
 }

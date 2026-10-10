@@ -5,7 +5,7 @@ import ProductsCards from "../componunts/home/ProductsCards";
 
 
 export default async function Home() {
-     const res =await fetch("https://api.abcz.workers.dev/api/bazardor/products")
+     const res =await fetch("https://openapi.programming-hero.com/api/bazardor/products")
     const allProducts = await res.json()
      const ProductsPriceUP = allProducts.filter(product=>product.change.dir==="up")
      const ProductsPriceUPSorting = ProductsPriceUP.sort((a,b)=>b.change.pct-a.change.pct)

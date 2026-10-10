@@ -28,7 +28,7 @@ export default function RootLayout({ children }) {
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
-        <Suspense fallback={<div>লোড হচ্ছে...</div>}>
+        <Suspense fallback={<div>Loading...</div>}>
         <Navber />
         </Suspense>
           

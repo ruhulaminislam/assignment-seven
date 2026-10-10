@@ -87,7 +87,7 @@ const ProductsDitilesPage = ({ data }) => {
           </p>
         </div>
 
-        {markets.length > 0 ? (
+        {markets?.length > 0 ? (
           <div className="overflow-x-auto rounded-2xl border border-[#E1E8E1] bg-white">
             <table className="w-full min-w-[650px] text-left">
               <thead className="bg-[#F0F5F0]">
@@ -101,30 +101,30 @@ const ProductsDitilesPage = ({ data }) => {
               </thead>
 
               <tbody className="divide-y divide-[#E8EEE8]">
-                {markets.map((item, index) => (
+                {markets?.map((item, index) => (
                   <tr
-                    key={item.id ?? `${item.market}-${index}`}
+                    key={item?.id ?? `${item?.market}-${index}`}
                     className="transition-colors hover:bg-[#F8FAF7]"
                   >
                     <td className="px-5 py-4 font-medium text-[#263526]">
-                      {item.market}
+                      {item?.market}
                     </td>
 
                     <td className="px-5 py-4 text-gray-600">
-                      {item.division}
+                      {item?.division}
                     </td>
 
                     <td className="px-5 py-4 font-medium text-[#1A9951]">
-                      {item.min.toLocaleString("bn-BD")} টাকা
+                      {item?.min.toLocaleString("bn-BD")} টাকা
                     </td>
 
                     <td className="px-5 py-4 font-medium text-[#D03739]">
-                      {item.max.toLocaleString("bn-BD")} টাকা
+                      {item?.max.toLocaleString("bn-BD")} টাকা
                     </td>
 
                     <td className="px-5 py-4 font-semibold text-[#263526]">
                       {Math.round(
-                        (item.min + item.max) / 2
+                        (item?.min + item?.max) / 2
                       ).toLocaleString("bn-BD")} টাকা
                     </td>
                   </tr>
